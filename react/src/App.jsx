@@ -1,4 +1,6 @@
-import { useState } from 'react'
+
+import React from 'react';
+import Home from './portal/Home';
 
 import './App.css'
 
@@ -6,7 +8,7 @@ function App() {
  
 return (
     <>
-     <div>Shaheen</div>
+   <Route path="/" element={<Home />} />
     </>
   )
 }
