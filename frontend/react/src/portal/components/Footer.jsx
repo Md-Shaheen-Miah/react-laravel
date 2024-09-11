@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
  const Footer = () => {
   return (
@@ -8,9 +9,9 @@ import React from 'react'
     <div className="row g-5">
       <div className="col-lg-3 col-md-6">
         <h5 className="text-light mb-4">Address</h5>
-        <p className="mb-2"><i className="fa fa-map-marker-alt me-3" />123 Street, New York, USA</p>
-        <p className="mb-2"><i className="fa fa-phone-alt me-3" />+012 345 67890</p>
-        <p className="mb-2"><i className="fa fa-envelope me-3" />info@example.com</p>
+        <p className="mb-2"><i className="fa fa-map-marker-alt me-3" />Uttara, Dhaka, Bangladesh</p>
+        <p className="mb-2"><i className="fa fa-phone-alt me-3" />+8801641160101</p>
+        <p className="mb-2"><i className="fa fa-envelope me-3" />mdshaheen60101@gmail.com</p>
         <div className="d-flex pt-2">
           <a className="btn btn-outline-light btn-social rounded-circle" href><i className="fab fa-twitter" /></a>
           <a className="btn btn-outline-light btn-social rounded-circle" href><i className="fab fa-facebook-f" /></a>
@@ -19,20 +20,20 @@ import React from 'react'
         </div>
       </div>
       <div className="col-lg-3 col-md-6">
-        <h5 className="text-light mb-4">Services</h5>
-        <a className="btn btn-link" href>Cardiology</a>
-        <a className="btn btn-link" href>Pulmonary</a>
-        <a className="btn btn-link" href>Neurology</a>
-        <a className="btn btn-link" href>Orthopedics</a>
-        <a className="btn btn-link" href>Laboratory</a>
+        <NavLink className="text-light mb-4" to="#">Services</NavLink>
+        <NavLink className="btn btn-link" to="#">Cardiology</NavLink>
+        <NavLink className="btn btn-link" to="#">Pulmonary</NavLink>
+        <NavLink className="btn btn-link" to="#">Neurology</NavLink>
+        <NavLink className="btn btn-link" to="#">Orthopedics</NavLink>
+        <NavLink className="btn btn-link" to="#">Laboratory</NavLink>
       </div>
       <div className="col-lg-3 col-md-6">
-        <h5 className="text-light mb-4">Quick Links</h5>
-        <a className="btn btn-link" href>About Us</a>
-        <a className="btn btn-link" href>Contact Us</a>
-        <a className="btn btn-link" href>Our Services</a>
-        <a className="btn btn-link" href>Terms &amp; Condition</a>
-        <a className="btn btn-link" href>Support</a>
+        <NavLink className="text-light mb-4" to="#">Quick Links</NavLink>
+        <NavLink className="btn btn-link" to="/About">About Us</NavLink>
+        <NavLink className="btn btn-link"  to="/Contact">Contact Us</NavLink>
+        <NavLink className="btn btn-link" to="/Service">Our Services</NavLink>
+        <NavLink className="btn btn-link" to="/Doctor">Terms &amp; Condition</NavLink>
+        <NavLink className="btn btn-link" to="#">Support</NavLink>
       </div>
       <div className="col-lg-3 col-md-6">
         <h5 className="text-light mb-4">Newsletter</h5>
@@ -52,7 +53,7 @@ import React from 'react'
         </div>
         <div className="col-md-6 text-center text-md-end">
        
-          Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+          Designed By <a className="border-bottom" >Shaheen</a>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+
 const Home = () => {
   return (
    <div>
@@ -12,7 +13,7 @@ const Home = () => {
       <div className="col-lg-7 px-5 text-start">
         <div className="h-100 d-inline-flex align-items-center py-3 me-4">
           <small className="fa fa-map-marker-alt text-primary me-2" />
-          <small>123 Street, New York, USA</small>
+          <small>Uttara, Dhaka, Bangladesh</small>
         </div>
         <div className="h-100 d-inline-flex align-items-center py-3">
           <small className="far fa-clock text-primary me-2" />
@@ -22,7 +23,7 @@ const Home = () => {
       <div className="col-lg-5 px-5 text-end">
         <div className="h-100 d-inline-flex align-items-center py-3 me-4">
           <small className="fa fa-phone-alt text-primary me-2" />
-          <small>+012 345 6789</small>
+          <small>+8801641160101</small>
         </div>
         <div className="h-100 d-inline-flex align-items-center">
           <a className="btn btn-sm-square rounded-circle bg-white text-primary me-1" href><i className="fab fa-facebook-f" /></a>
@@ -36,7 +37,7 @@ const Home = () => {
  
   <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
     <NavLink to="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
-      <h1 className="m-0 text-primary"><i className="far fa-hospital me-3" />Klinik</h1>
+      <h1 className="m-0 text-primary"><i className="far fa-hospital me-3" />SHEBA</h1>
     </NavLink>
     <button type="button" className="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span className="navbar-toggler-icon" />
@@ -46,20 +47,21 @@ const Home = () => {
     
         <NavLink className="nav-item nav-link active" to="/">Home</NavLink>
         <NavLink className="nav-item nav-link" to="/about">About</NavLink>
-        <NavLink className="nav-item nav-link">Service</NavLink>
+        <NavLink className="nav-item nav-link" to="/Service">Service</NavLink>
         <div className="nav-item dropdown">
           <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
           <div className="dropdown-menu rounded-0 rounded-bottom m-0">
-            <a href="feature.html" className="dropdown-item">Feature</a>
-            <a href="team.html" className="dropdown-item">Our Doctor</a>
-            <a href="appointment.html" className="dropdown-item">Appointment</a>
-            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-            <a href="404.html" className="dropdown-item">404 Page</a>
+            <NavLink className="dropdown-item">Feature</NavLink>
+            <NavLink className="dropdown-item">Our Doctor</NavLink>
+            <NavLink className="dropdown-item">Appointment</NavLink>
+            <NavLink className="dropdown-item">Testimonial</NavLink>
+            <NavLink className="dropdown-item">404 Page</NavLink>
           </div>
         </div>
-        <a href="contact.html" className="nav-item nav-link">Contact</a>
+        <NavLink className="nav-item nav-link" to="/Contact">Contact</NavLink>
+        <NavLink className="nav-item nav-link" to="/Login">Login</NavLink>
       </div>
-      <a href className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i className="fa fa-arrow-right ms-3" /></a>
+      <NavLink className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" to="/Appointment">Appointment<i className="fa fa-arrow-right ms-3" /></NavLink>
     </div>
   </nav>
  
@@ -70,19 +72,19 @@ const Home = () => {
         <div className="row g-4">
           <div className="col-sm-4">
             <div className="border-start border-light ps-4">
-              <h2 className="text-white mb-1" data-toggle="counter-up">123</h2>
+              <h2 className="text-white mb-1" data-toggle="counter-up">15</h2>
               <p className="text-light mb-0">Expert Doctors</p>
             </div>
           </div>
           <div className="col-sm-4">
             <div className="border-start border-light ps-4">
-              <h2 className="text-white mb-1" data-toggle="counter-up">1234</h2>
+              <h2 className="text-white mb-1" data-toggle="counter-up">30</h2>
               <p className="text-light mb-0">Medical Stuff</p>
             </div>
           </div>
           <div className="col-sm-4">
             <div className="border-start border-light ps-4">
-              <h2 className="text-white mb-1" data-toggle="counter-up">12345</h2>
+              <h2 className="text-white mb-1" data-toggle="counter-up">150</h2>
               <p className="text-light mb-0">Total Patients</p>
             </div>
           </div>
@@ -123,14 +125,14 @@ const Home = () => {
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-          <p className="d-inline-block border rounded-pill py-1 px-4">About Us</p>
+          <NavLink className="d-inline-block border rounded-pill py-1 px-4" to="/About">About Us</NavLink>
           <h1 className="mb-4">Why You Should Trust Us? Get Know About Us!</h1>
           <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
           <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
           <p><i className="far fa-check-circle text-primary me-3" />Quality health care</p>
           <p><i className="far fa-check-circle text-primary me-3" />Only Qualified Doctors</p>
           <p><i className="far fa-check-circle text-primary me-3" />Medical Research Professionals</p>
-          <a className="btn btn-primary rounded-pill py-3 px-5 mt-3" href>Read More</a>
+          <NavLink className="btn btn-primary rounded-pill py-3 px-5 mt-3" to="#" >Read More</NavLink>
         </div>
       </div>
     </div>
@@ -139,7 +141,7 @@ const Home = () => {
   <div className="container-xxl py-5">
     <div className="container">
       <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: 600}}>
-        <p className="d-inline-block border rounded-pill py-1 px-4">Services</p>
+        <NavLink className="d-inline-block border rounded-pill py-1 px-4" to="/Service">Services</NavLink>
         <h1>Health Care Solutions</h1>
       </div>
       <div className="row g-4">
@@ -150,7 +152,7 @@ const Home = () => {
             </div>
             <h4 className="mb-3">Cardiology</h4>
             <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-            <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
+            <NavLink className="btn" to="#"><i className="fa fa-plus text-primary me-3" />Read More</NavLink>
           </div>
         </div>
         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -212,7 +214,7 @@ const Home = () => {
       <div className="row g-0 mx-lg-0">
         <div className="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
           <div className="p-lg-5 ps-lg-0">
-            <p className="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
+            <NavLink className="d-inline-block border rounded-pill text-light py-1 px-4" to="/Feature">Features</NavLink>
             <h1 className="text-white mb-4">Why Choose Us</h1>
             <p className="text-white mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
             <div className="row g-4">
@@ -351,7 +353,7 @@ const Home = () => {
     <div className="container">
       <div className="row g-5">
         <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-          <p className="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+          <NavLink className="d-inline-block border rounded-pill py-1 px-4" to="/Appointment">Appointment</NavLink>
           <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
           <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
           <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
@@ -360,7 +362,7 @@ const Home = () => {
             </div>
             <div className="ms-4">
               <p className="mb-2">Call Us Now</p>
-              <h5 className="mb-0">+012 345 6789</h5>
+              <h5 className="mb-0">+8801641160101</h5>
             </div>
           </div>
           <div className="bg-light rounded d-flex align-items-center p-5">
@@ -369,7 +371,7 @@ const Home = () => {
             </div>
             <div className="ms-4">
               <p className="mb-2">Mail Us Now</p>
-              <h5 className="mb-0">info@example.com</h5>
+              <h5 className="mb-0">mdshaheen60101@gmail.com</h5>
             </div>
           </div>
         </div>
@@ -458,9 +460,9 @@ const Home = () => {
       <div className="row g-5">
         <div className="col-lg-3 col-md-6">
           <h5 className="text-light mb-4">Address</h5>
-          <p className="mb-2"><i className="fa fa-map-marker-alt me-3" />123 Street, New York, USA</p>
-          <p className="mb-2"><i className="fa fa-phone-alt me-3" />+012 345 67890</p>
-          <p className="mb-2"><i className="fa fa-envelope me-3" />info@example.com</p>
+          <p className="mb-2"><i className="fa fa-map-marker-alt me-3" />Uttara, Dhaka, Bangladesh</p>
+          <p className="mb-2"><i className="fa fa-phone-alt me-3" />+8801641160101</p>
+          <p className="mb-2"><i className="fa fa-envelope me-3" />mdshaheen60101@gmail.com</p>
           <div className="d-flex pt-2">
             <a className="btn btn-outline-light btn-social rounded-circle" href><i className="fab fa-twitter" /></a>
             <a className="btn btn-outline-light btn-social rounded-circle" href><i className="fab fa-facebook-f" /></a>
@@ -478,11 +480,11 @@ const Home = () => {
         </div>
         <div className="col-lg-3 col-md-6">
           <h5 className="text-light mb-4">Quick Links</h5>
-          <a className="btn btn-link" href>About Us</a>
-          <a className="btn btn-link" href>Contact Us</a>
-          <a className="btn btn-link" href>Our Services</a>
-          <a className="btn btn-link" href>Terms &amp; Condition</a>
-          <a className="btn btn-link" href>Support</a>
+          <NavLink className="btn btn-link" to="/About">About Us</NavLink>
+          <NavLink className="btn btn-link" to="/Contact">Contact Us</NavLink>
+          <NavLink className="btn btn-link" to="/Service">Our Services</NavLink>
+          <NavLink className="btn btn-link" to="/Doctor">Terms &amp; Condition</NavLink>
+          <NavLink className="btn btn-link" href>Support</NavLink>
         </div>
         <div className="col-lg-3 col-md-6">
           <h5 className="text-light mb-4">Newsletter</h5>
@@ -502,7 +504,7 @@ const Home = () => {
           </div>
           <div className="col-md-6 text-center text-md-end">
           
-            Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+            Designed By <a className="border-bottom" href="#">Shaheen</a>
           </div>
         </div>
       </div>
