@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Navbar from '../../portal/components/Navbar'
 import Footer from '../../portal/components/Footer'
 import { useNavigate } from 'react-router-dom';
+import '../../portal/css/Login.css'
  const Login = () => {
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('');       
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
   
@@ -20,7 +21,7 @@ import { useNavigate } from 'react-router-dom';
   return (
     <div className='logoback'>
       <Navbar/>
-    <form onSubmit={handleSubmit} style={{fontFamily: 'sans-serif',  margin:' 0', padding:' 0 ',display: 'flex', justifyContent: 'center', alignItems:' center',minHeight:"100vh"}}>
+    <form onSubmit={handleSubmit} style={{fontFamily: 'sans-serif',  margin:' 0', padding:' 50px ',display: 'flex', justifyContent: 'center', alignItems:' center',minHeight:"100vh"}}>
       <div className='logcontainer'>
         <h3 style={{textAlign:'center',color:'#ff7518'}}>Login</h3>
       <div>
