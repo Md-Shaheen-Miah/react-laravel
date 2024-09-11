@@ -10,6 +10,7 @@ import Doctor from './portal/pages/Doctor'
 import Appointment from './portal/pages/Appointment'
 import Testimonial from './portal/pages/Testimonial'
 import Contact from './portal/pages/Contact'
+import Login from './portal/pages/Login'
 import Dashboard from './admin/components/Dashboard'
 
 
@@ -26,6 +27,7 @@ return (
        <Route path="/Appointment" element={<Appointment />} />
        <Route path="/Testimonial" element={<Testimonial />} />
        <Route path="/Contact" element={<Contact />} />
+       <Route path="/Login" element={<Login />} />
        <Route path="/Dashboard" element={<Dashboard />} />
 
 

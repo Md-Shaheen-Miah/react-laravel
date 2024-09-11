@@ -4,6 +4,7 @@
     background-color:#29465B !important;
     position: fixed;
     width: 100%;
+    z-index: 1000;
   
    
 }
