@@ -11,6 +11,7 @@ import Appointment from './portal/pages/Appointment'
 import Testimonial from './portal/pages/Testimonial'
 import Contact from './portal/pages/Contact'
 import Login from './portal/pages/Login'
+import Psychology from './portal/pages/Psychology'
 import Dashboard from './admin/components/Dashboard'
 
 
@@ -28,6 +29,7 @@ return (
        <Route path="/Testimonial" element={<Testimonial />} />
        <Route path="/Contact" element={<Contact />} />
        <Route path="/Login" element={<Login />} />
+       <Route path="/Psychology" element={<Psychology />} />
        <Route path="/Dashboard" element={<Dashboard />} />
 
 

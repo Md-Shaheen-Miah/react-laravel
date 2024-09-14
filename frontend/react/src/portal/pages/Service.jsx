@@ -32,9 +32,9 @@ const Service = () => {
             <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width: 65, height: 65}}>
               <i className="fa fa-heartbeat text-primary fs-4" />
             </div>
-            <h4 className="mb-3">Cardiology</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-            <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
+            <h4 className="mb-3">Psychology</h4>
+            <p className="mb-4">Psychology is the scientific study of the mind and behavior. It explores how people think, feel, and act individually or in groups. </p>
+            <NavLink className="btn" to="/"><i className="fa fa-plus text-primary me-3" />Read More</NavLink>
           </div>
         </div>
         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -42,8 +42,8 @@ const Service = () => {
             <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width: 65, height: 65}}>
               <i className="fa fa-x-ray text-primary fs-4" />
             </div>
-            <h4 className="mb-3">Pulmonary</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <h4 className="mb-3">Orthopedics</h4>
+            <p className="mb-4">Orthopedics is a branch of medicine focused on the diagnosis, treatment, and prevention of conditions related to the musculoskeletal system.</p>
             <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
           </div>
         </div>
@@ -53,7 +53,7 @@ const Service = () => {
               <i className="fa fa-brain text-primary fs-4" />
             </div>
             <h4 className="mb-3">Neurology</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <p className="mb-4">Neurology is the branch of medicine that deals with the study and treatment of disorders related to the nervous system, including the brain, spinal cord, and nerves..</p>
             <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
           </div>
         </div>
@@ -62,8 +62,8 @@ const Service = () => {
             <div className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style={{width: 65, height: 65}}>
               <i className="fa fa-wheelchair text-primary fs-4" />
             </div>
-            <h4 className="mb-3">Orthopedics</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <h4 className="mb-3">Dermatology</h4>
+            <p className="mb-4">Dermatology is the branch of medicine focused on diagnosing and treating skin, hair, and nail conditions. Dermatologists manage a wide range of issues, from acne, eczema.</p>
             <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Service = () => {
               <i className="fa fa-tooth text-primary fs-4" />
             </div>
             <h4 className="mb-3">Dental Surgery</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <p className="mb-4">Dental surgery refers to medical procedures that involve the teeth, gums, and jaw. It can include anything from simple extractions (removal of teeth) to more complex surgeries.</p>
             <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Service = () => {
               <i className="fa fa-vials text-primary fs-4" />
             </div>
             <h4 className="mb-3">Laboratory</h4>
-            <p className="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+            <p className="mb-4">A Dental Laboratory is a specialized facility where dental technicians create dental prosthetics, such as crowns, bridges, dentures, and other appliances used to replace or enhance teeth.</p>
             <a className="btn" href><i className="fa fa-plus text-primary me-3" />Read More</a>
           </div>
         </div>

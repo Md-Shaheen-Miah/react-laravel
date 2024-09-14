@@ -1,0 +1,64 @@
+/* Container for the About section */
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Doctor Information */
+  .doctor-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .doctor-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .doctor-info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-info h3 {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Doctor Description */
+  .doctor-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .doctor-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .doctor-description li {
+    margin-bottom: 5px;
+  }
+  
+  .doctor-description p {
+    font-size: 1rem;
+  }
+  
