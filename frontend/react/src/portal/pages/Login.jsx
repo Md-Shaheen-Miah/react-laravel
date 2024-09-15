@@ -23,7 +23,7 @@ import '../../portal/css/Login.css'
       <Navbar/>
     <form onSubmit={handleSubmit} style={{fontFamily: 'sans-serif',  margin:' 0', padding:' 50px ',display: 'flex', justifyContent: 'center', alignItems:' center',minHeight:"100vh"}}>
       <div className='logcontainer'>
-        <h3 style={{textAlign:'center',color:'#ff7518'}}>Login</h3>
+        <h3 style={{textAlign:'center',color:'#ff7518'}}>User Login</h3>
       <div>
         <label style={{color:'#ff7518'}}>Username:</label>
         <input

@@ -57,7 +57,7 @@ import { NavLink } from 'react-router-dom';
         <NavLink className="nav-item nav-link" to="/Contact">Contact</NavLink>
         <NavLink className="nav-item nav-link" to="/Login">Login</NavLink>
       </div>
-      <a href className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i className="fa fa-arrow-right ms-3" /></a>
+      <NavLink className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block" to="/Appointment">Appointment<i className="fa fa-arrow-right ms-3" /></NavLink>
     </div>
   </nav>
  

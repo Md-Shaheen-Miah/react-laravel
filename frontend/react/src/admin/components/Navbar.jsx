@@ -2,16 +2,17 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import '../../admin/css/Navbar.css';
+import { NavLink } from 'react-router-dom';
 const Navbarr = () => {
   return (
     
     <Navbar className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand className='logo' href="#home">SHEBA</Navbar.Brand>
+      <NavLink className='logo'to="/Dashboard" >SHEBA</NavLink>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text className='sign'>
-          Signed in as: <a className='sign' href="#login">Shaheen</a>
+          Signed in as: <NavLink className='sign' to="/Admin" >Admin</NavLink>
         </Navbar.Text>
       </Navbar.Collapse>
     </Container>

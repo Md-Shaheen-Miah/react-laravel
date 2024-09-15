@@ -12,7 +12,9 @@ import Testimonial from './portal/pages/Testimonial'
 import Contact from './portal/pages/Contact'
 import Login from './portal/pages/Login'
 import Psychology from './portal/pages/Psychology'
+import Gynecology from './portal/pages/Gynecology'
 import Dashboard from './admin/components/Dashboard'
+import Admin from './admin/pages/Admin'
 
 
 function App() {
@@ -30,7 +32,9 @@ return (
        <Route path="/Contact" element={<Contact />} />
        <Route path="/Login" element={<Login />} />
        <Route path="/Psychology" element={<Psychology />} />
+       <Route path="/Gynecology" element={<Gynecology />} />
        <Route path="/Dashboard" element={<Dashboard />} />
+       <Route path="/Admin" element={<Admin />} />
 
 
     </Routes>

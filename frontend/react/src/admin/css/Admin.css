@@ -1,0 +1,81 @@
+.admin-details {
+   
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    font-size: 2.5rem;
+    color: #29465B;
+}
+
+.admin-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.admin-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
+    width: 30%;
+}
+
+.admin-card .admin-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.admin-card h2 {
+    font-size: 1.8rem;
+    color: #29465B;
+}
+
+.admin-card p {
+    font-size: 1rem;
+    color: #29465B;
+}
+
+.admin-details-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 65%;
+}
+
+.admin-details-section h3 {
+    font-size: 1.5rem;
+    color: #29465B;
+    margin-bottom: 15px;
+}
+
+.admin-details-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-details-section li {
+    font-size: 1rem;
+    color: #29465B;
+    margin-bottom: 10px;
+}
+
+.admin-details-section li strong {
+    color: #29465B;
+}

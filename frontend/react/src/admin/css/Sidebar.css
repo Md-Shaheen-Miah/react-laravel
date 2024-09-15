@@ -1,7 +1,7 @@
 
 
 .sidebar {
-    margin-top: 90px;
+    margin-top: 70px;
     width: 250px;
     background-color: #29465B ;
     color: #fff;
@@ -61,5 +61,9 @@
     cursor: pointer;
     padding: 10px;
     border-radius: 15px;
+  }
+  h2{
+    float: left;
+   margin-left: 5px;
   }
   

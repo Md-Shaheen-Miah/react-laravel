@@ -12,9 +12,16 @@
 .logo {
     color: #ffffff !important;
     font-size: 2.5rem;
-   float: left;
+    float: left;
+    text-decoration: none;
+  
   
 }
 .sign{
     color: #ffffff !important;
+    text-decoration: none;
 }
+
+.sign .sign:hover {
+    color:#ffbf00!important; /* Ensure the color changes to red on hover */
+  }

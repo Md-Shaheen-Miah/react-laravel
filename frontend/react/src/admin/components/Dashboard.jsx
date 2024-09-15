@@ -49,7 +49,7 @@ const Dashboard = () => {
         <div style={{width:'20%', float:'left'}}><Sidebar/></div>
             <div style={{width:'80%', marginLeft:'20%', minHeight:'100vh'}}>
                 <div className="dashboard">
-                <h1 style={{marginTop:'90px'}}> Sheba Clinic Dashboard</h1>
+                <h1 style={{marginTop:'90px',color:'#29465B'}}> Sheba Clinic Dashboard</h1>
                 <div className="cards">
                     <div className="card">
                     <h2>Total Patients</h2>
