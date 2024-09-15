@@ -61,15 +61,18 @@ const Appointment = () => {
                 </div>
                 <div className="col-12 col-sm-6">
                   <select className="form-select border-0" style={{height: 55}}>
-                    <option selected>Choose Doctor</option>
-                    <option value={1}>Doctor 1</option>
-                    <option value={2}>Doctor 2</option>
-                    <option value={3}>Doctor 3</option>
+                  <option selected>Choose Doctor Id</option>
+                    <option value={1}>101</option>
+                    <option value={2}>102</option>
+                    <option value={3}>103</option>
+                    <option value={1}>104</option>
+                    <option value={2}>105</option>
+                    <option value={3}>106</option>
                   </select>
                 </div>
                 <div className="col-12 col-sm-6">
                   <div className="date" id="date" data-target-input="nearest">
-                    <input type="text" className="form-control border-0 datetimepicker-input" placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker" style={{height: 55}} />
+                    <input type="number" className="form-control border-0 datetimepicker-input" placeholder="Patient Age"  style={{height: 55}} />
                   </div>
                 </div>
                 <div className="col-12 col-sm-6">

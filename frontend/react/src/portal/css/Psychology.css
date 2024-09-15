@@ -1,15 +1,16 @@
 /* Container for the About section */
 .about-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   /* Doctor Information */
   .doctor-info {
+    
     text-align: center;
     margin-bottom: 20px;
   }
@@ -61,4 +62,7 @@
   .doctor-description p {
     font-size: 1rem;
   }
-  
+  .button{
+   
+    
+  }

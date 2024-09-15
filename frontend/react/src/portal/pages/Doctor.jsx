@@ -29,12 +29,15 @@ const Doctor = () => {
         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
           <div className="team-item position-relative rounded overflow-hidden">
             <div className="overflow-hidden">
-              <img className="img-fluid" src="img/team-1.jpg" alt />
+              <img className="img-fluid" src="img/Photoroom-20240914_180122_1.png" alt />
             </div>
             <div className="team-text bg-light text-center p-4">
-              <h5>Doctor Name</h5>
-              <p className="text-primary">Department</p>
+              <h5>Dr.Rakibul Islam  <span style={{color:'red'}}>Id:101</span></h5>
+              <p className="text-primary">Psychology</p>
               <div className="team-social text-center">
+             
+                <NavLink style={{textDecoration:'none',backgroundColor:'	#11a01d',color:'#ffffff',padding:'10px',borderRadius:'10px'}} to="/Psychology">Details</NavLink>
+                
                 <a className="btn btn-square" href><i className="fab fa-facebook-f" /></a>
                 <a className="btn btn-square" href><i className="fab fa-twitter" /></a>
                 <a className="btn btn-square" href><i className="fab fa-instagram" /></a>
