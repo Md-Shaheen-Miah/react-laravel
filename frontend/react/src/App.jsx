@@ -14,7 +14,9 @@ import Login from './portal/pages/Login'
 import Psychology from './portal/pages/Psychology'
 import Gynecology from './portal/pages/Gynecology'
 import Dashboard from './admin/components/Dashboard'
+
 import Admin from './admin/pages/Admin'
+import Messege from './admin/pages/Messege'
 
 
 function App() {
@@ -34,7 +36,9 @@ return (
        <Route path="/Psychology" element={<Psychology />} />
        <Route path="/Gynecology" element={<Gynecology />} />
        <Route path="/Dashboard" element={<Dashboard />} />
+
        <Route path="/Admin" element={<Admin />} />
+       <Route path="/Messege" element={<Messege />} />
 
 
     </Routes>

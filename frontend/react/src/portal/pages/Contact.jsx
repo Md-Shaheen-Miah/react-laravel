@@ -3,6 +3,8 @@ import Navbar from '../../portal/components/Navbar'
 import Footer from '../../portal/components/Footer'
 import { NavLink } from 'react-router-dom'
 const Contact = () => {
+
+  
   return (
     <div>
   <Navbar/>

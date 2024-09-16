@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+ 
+}
+
+table {
+ 
+  width: 97%;
+  border-collapse: collapse;
+ 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+td{
+  color: #29465B;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+caption {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color:#29465B;
+}
+
+h1{
+  text-align: center;
+  color: #29465B;
+}

@@ -42,7 +42,7 @@ const Psychology = () => {
         <p>Phone: (123) 456-7890</p>
         <div className="button">
         <NavLink to="/Appointment" style={{backgroundColor:'#4fb497',padding:'10px',color:'#ffffff',borderRadius:'10px',textDecoration:'none'}}>Appointment Now</NavLink>
-      </div>
+        </div>
       </div>
       
     </div>
