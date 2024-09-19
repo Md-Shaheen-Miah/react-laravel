@@ -9,7 +9,7 @@ const Contact = () => {
     <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
       <Sidebar style={{ flex: '0 0 20%' }} />
       <div style={{ flex: '1' }}>
-        <div style={{marginTop:'90px',marginLeft:'15%'}}>
+        <div style={{marginTop:'90px',marginLeft:'20%'}}>
           <div className='box'>
             <h1>Message from Client</h1>
         <table>
@@ -35,13 +35,7 @@ const Contact = () => {
                   <button>Delete</button>
                 </td>
             </tr>
-            <tr>
-                <td>Data 6</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-            </tr>
+           
            
         </tbody>
     </table>
