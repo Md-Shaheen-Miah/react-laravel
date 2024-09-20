@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\contact;
 use App\Http\Requests\StorecontactRequest;
 use App\Http\Requests\UpdatecontactRequest;
-
+use Illuminate\Support\Facades\DB;
 class ContactController extends Controller
 {
     /**
@@ -13,7 +13,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+
+        return response()->json([
+        'results' => $contacts 
+        ],200);
     }
 
     /**
@@ -27,9 +31,18 @@ class ContactController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorecontactRequest $request)
+    public function store(Request $request)
     {
-        //
+        
+        $products = DB::table('contacts')
+        ->insert(
+            [
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ]
+        );
     }
 
     /**

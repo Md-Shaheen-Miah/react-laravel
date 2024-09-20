@@ -11,7 +11,7 @@ class StorecontactRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -20,9 +20,23 @@ class StorecontactRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
-    {
+    { 
+         if (request()->isMethod('post')) {
         return [
-            //
+            'name' => 'required|string|max:258',
+            'email' => 'required|string',
+            'subject' => 'required|string',
+            'message' => 'required|string'
+        ];
+    }else{
+        return [
+            'name' => 'required|string|max:258',
+            'email' => 'required|string',
+            'subject' => 'required|string',
+             'message' => 'required|string'
         ];
     }
 }
+    
+}
+
