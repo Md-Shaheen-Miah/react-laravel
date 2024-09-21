@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\contact;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StorecontactRequest;
 use App\Http\Requests\UpdatecontactRequest;
-use Illuminate\Support\Facades\DB;
+
 class ContactController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class ContactController extends Controller
         $contacts = Contact::all();
 
         return response()->json([
-        'results' => $contacts 
+        'results' =>  $contacts
         ],200);
     }
 
@@ -33,7 +34,6 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
         $products = DB::table('contacts')
         ->insert(
             [
@@ -43,6 +43,7 @@ class ContactController extends Controller
                 'message' => $request->message,
             ]
         );
+    
     }
 
     /**
