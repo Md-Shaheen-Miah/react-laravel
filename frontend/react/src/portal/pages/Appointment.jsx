@@ -48,6 +48,8 @@ const Appointment = () => {
         </div>
         <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
           <div className="bg-light rounded h-100 d-flex align-items-center p-5">
+
+
             <form>
               <div className="row g-3">
                 <div className="col-12 col-sm-6">
@@ -88,6 +90,9 @@ const Appointment = () => {
                 </div>
               </div>
             </form>
+
+
+            
           </div>
         </div>
       </div>

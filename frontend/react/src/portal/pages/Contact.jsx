@@ -5,40 +5,10 @@ import { NavLink } from 'react-router-dom'
 
 import React, { useState } from 'react';
 
-import axios from 'axios';
+
 const Contact = () => {
 
-  const [userField, setUserField] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-});
-
-const changeUserFieldHandler = (e) => {
-    setUserField({
-        ...userField,
-        [e.target.name]: e.target.value
-    });
-    // console.log(userField);
-
-}
-const [loading,setLoading]=useState()
-
-const onSubmitChange = async (e) => {
-    e.preventDefault();
-    try {
-        const responce= await axios.post("http://127.0.0.1:8000/api/contact", userField); 
-        console.log(responce)
-        setLoading(true);
-    } catch (err) {
-        console.log("Something Wrong");
-    }
-}
-if(loading){
-    return <Home/>
-}
-  
+ 
   return (
     <div>
   <Navbar/>
@@ -96,37 +66,46 @@ if(loading){
             <p className="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
             <h1 className="mb-4">Have Any Query? Please Contact Us!</h1>
             <p className="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax &amp; PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+
+
+
+
             <form>
               <div className="row g-3">
                 <div className="col-md-6">
                   <div className="form-floating">
-                    <input type="text" className="form-control" name="name" placeholder="Your Name" onChange={e => changeUserFieldHandler(e)}  />
+                    <input type="text" className="form-control" name="name" placeholder="Your Name"  />
                     <label htmlFor="name">Your Name</label>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="form-floating">
-                    <input type="email" className="form-control" name="email" placeholder="Your Email" onChange={e => changeUserFieldHandler(e)}  />
+                    <input type="email" className="form-control" name="email" placeholder="Your Email"   />
                     <label htmlFor="email">Your Email</label>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-floating">
-                    <input type="text" className="form-control" name="subject" placeholder="Subject" onChange={e => changeUserFieldHandler(e)}  />
+                    <input type="text" className="form-control" name="subject" placeholder="Subject"   />
                     <label htmlFor="subject">Subject</label>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a message here" name="message" style={{height: 100}} onChange={e => changeUserFieldHandler(e)}   />
+                    <textarea className="form-control" placeholder="Leave a message here" name="message" style={{height: 100}}    />
                     <label htmlFor="message">Message</label>
                   </div>
                 </div>
                 <div className="col-12">
-                  <button className="btn btn-primary w-100 py-3" type="submit" onClick={e => onSubmitChange(e)} >Send Message</button>
+                  <button className="btn btn-primary w-100 py-3" type="submit"  >Send Message</button>
                 </div>
               </div>
             </form>
+
+
+
+
+            
           </div>
         </div>
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

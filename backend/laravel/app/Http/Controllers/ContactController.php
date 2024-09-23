@@ -14,11 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
-
-        return response()->json([
-        'results' =>  $contacts
-        ],200);
+       
     }
 
     /**
@@ -34,15 +30,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $products = DB::table('contacts')
-        ->insert(
-            [
-                'name' => $request->name,
-                'email' => $request->email,
-                'subject' => $request->subject,
-                'message' => $request->message,
-            ]
-        );
+       
     
     }
 
