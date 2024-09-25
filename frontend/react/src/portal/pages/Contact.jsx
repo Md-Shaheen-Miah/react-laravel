@@ -2,11 +2,42 @@
 import Navbar from '../../portal/components/Navbar'
 import Footer from '../../portal/components/Footer'
 import { NavLink } from 'react-router-dom'
-
+import axios from 'axios';
 import React, { useState } from 'react';
 
 
 const Contact = () => {
+
+  const [userField, setUserField] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+});
+
+const changeUserFieldHandler = (e) => {
+    setUserField({
+        ...userField,
+        [e.target.name]: e.target.value
+    });
+    // console.log(userField);
+
+}
+const [loading,setLoading]=useState()
+
+const onSubmitChange = async (e) => {
+    e.preventDefault();
+    try {
+        const responce= await axios.post("#", userField);
+        console.log(responce)
+        setLoading(true);
+    } catch (err) {
+        console.log("Something Wrong");
+    }
+}
+if(loading){
+    return <Home/>
+}
 
  
   return (
@@ -74,30 +105,30 @@ const Contact = () => {
               <div className="row g-3">
                 <div className="col-md-6">
                   <div className="form-floating">
-                    <input type="text" className="form-control" name="name" placeholder="Your Name"  />
+                    <input type="text" className="form-control" name="name" placeholder="Your Name" onChange={e => changeUserFieldHandler(e)} required  />
                     <label htmlFor="name">Your Name</label>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="form-floating">
-                    <input type="email" className="form-control" name="email" placeholder="Your Email"   />
+                    <input type="email" className="form-control" name="email" placeholder="Your Email" onChange={e => changeUserFieldHandler(e)} required  />
                     <label htmlFor="email">Your Email</label>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-floating">
-                    <input type="text" className="form-control" name="subject" placeholder="Subject"   />
+                    <input type="text" className="form-control" name="subject" placeholder="Subject" onChange={e => changeUserFieldHandler(e)} required  />
                     <label htmlFor="subject">Subject</label>
                   </div>
                 </div>
                 <div className="col-12">
                   <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a message here" name="message" style={{height: 100}}    />
+                    <textarea className="form-control" placeholder="Leave a message here" name="message" style={{height: 100}} onChange={e => changeUserFieldHandler(e)} required   />
                     <label htmlFor="message">Message</label>
                   </div>
                 </div>
                 <div className="col-12">
-                  <button className="btn btn-primary w-100 py-3" type="submit"  >Send Message</button>
+                  <button className="btn btn-primary w-100 py-3" type="submit" onClick={e => onSubmitChange(e)} >Send Message</button>
                 </div>
               </div>
             </form>
