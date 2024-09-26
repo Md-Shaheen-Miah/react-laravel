@@ -1,20 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
 use App\Models\contact;
-use Illuminate\Support\Facades\DB;
+
 use App\Http\Requests\StorecontactRequest;
 use App\Http\Requests\UpdatecontactRequest;
 
 class ContactController extends Controller
+
+
+
+
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       
+        $contacts = Contact::all();
+
+        return response()->json([
+        'results' => $contacts
+        ],200);
     }
 
     /**
@@ -30,16 +38,31 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-       
-    
-    }
+        // Validate the incoming request data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:contacts',
+            'subject' => 'required|string',
+            'message' => 'required|string',
+        ]);
 
+        // Store data into the contacts table
+        Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ]);
+
+        return response()->json(['message' => 'Contact successfully saved!'], 201);
+    }
     /**
      * Display the specified resource.
      */
     public function show(contact $contact)
     {
-        //
+        $contacts = Contact::all();
+        return response()->json($contacts);
     }
 
     /**
@@ -61,8 +84,11 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(contact $contact)
+    public function destroy($id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        $contact->delete();
+        return response()->json(['message' => 'Contact deleted successfully!']);
     }
+    
 }
