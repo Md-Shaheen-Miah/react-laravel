@@ -1,8 +1,46 @@
-import React from 'react'
+
 import Navbar from '../../portal/components/Navbar'
 import Footer from '../../portal/components/Footer'
 import { NavLink } from 'react-router-dom'
+import axios from 'axios';
+import React, { useState } from 'react';
 const Appointment = () => {
+
+
+  const [userField, setUserField] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    doctor: "",
+    age: "",
+    date: "",
+    problem: ""
+});
+
+const changeUserFieldHandler = (e) => {
+    setUserField({
+        ...userField,
+        [e.target.name]: e.target.value
+    });
+    // console.log(userField);
+
+}
+const [loading,setLoading]=useState()
+
+const onSubmitChange = async (e) => {
+    e.preventDefault();
+    try {
+        const responce= await axios.post("http://127.0.0.1:8000/api/appointment/store", userField);
+        console.log(responce)
+        setLoading(true);
+    } catch (err) {
+        console.log("Something Wrong");
+    }
+}
+if(loading){
+    return <Home/>
+}
+
   return (
 
    <div>
@@ -50,46 +88,115 @@ const Appointment = () => {
           <div className="bg-light rounded h-100 d-flex align-items-center p-5">
 
 
-            <form>
-              <div className="row g-3">
-                <div className="col-12 col-sm-6">
-                  <input type="text" className="form-control border-0" placeholder="Your Name" style={{height: 55}} />
-                </div>
-                <div className="col-12 col-sm-6">
-                  <input type="email" className="form-control border-0" placeholder="Your Email" style={{height: 55}} />
-                </div>
-                <div className="col-12 col-sm-6">
-                  <input type="text" className="form-control border-0" placeholder="Your Mobile" style={{height: 55}} />
-                </div>
-                <div className="col-12 col-sm-6">
-                  <select className="form-select border-0" style={{height: 55}}>
-                  <option selected>Choose Doctor Id</option>
-                    <option value={1}>101</option>
-                    <option value={2}>102</option>
-                    <option value={3}>103</option>
-                    <option value={1}>104</option>
-                    <option value={2}>105</option>
-                    <option value={3}>106</option>
-                  </select>
-                </div>
-                <div className="col-12 col-sm-6">
-                  <div className="date" id="date" data-target-input="nearest">
-                    <input type="number" className="form-control border-0 datetimepicker-input" placeholder="Patient Age"  style={{height: 55}} />
-                  </div>
-                </div>
-                <div className="col-12 col-sm-6">
-                  <div className="time" id="time" data-target-input="nearest">
-                    <input type="text" className="form-control border-0 datetimepicker-input" placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker" style={{height: 55}} />
-                  </div>
-                </div>
-                <div className="col-12">
-                  <textarea className="form-control border-0" rows={5} placeholder="Describe your problem" defaultValue={""} />
-                </div>
-                <div className="col-12">
-                  <button className="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
-                </div>
-              </div>
-            </form>
+          <form>
+  <div className="row g-3">
+    {/* Name Input */}
+    <div className="col-12 col-sm-6">
+      <input
+        type="text"
+        className="form-control border-0"
+        placeholder="Your Name"
+        style={{ height: 55 }}
+        name="name"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Email Input */}
+    <div className="col-12 col-sm-6">
+      <input
+        type="email"
+        className="form-control border-0"
+        placeholder="Your Email"
+        style={{ height: 55 }}
+        name="email"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Mobile Input */}
+    <div className="col-12 col-sm-6">
+      <input
+        type="text"
+        className="form-control border-0"
+        placeholder="Your Mobile"
+        style={{ height: 55 }}
+        name="phone"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Doctor Selection */}
+    <div className="col-12 col-sm-6">
+      <select
+        className="form-select border-0"
+        style={{ height: 55 }}
+        name="doctor"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      >
+        <option value="" disabled selected>Choose Doctor ID</option>
+        <option value={101}>101</option>
+        <option value={102}>102</option>
+        <option value={103}>103</option>
+        <option value={104}>104</option>
+        <option value={105}>105</option>
+        <option value={106}>106</option>
+      </select>
+    </div>
+
+    {/* Age Input */}
+    <div className="col-12 col-sm-6">
+      <input
+        type="number"
+        className="form-control border-0"
+        placeholder="Patient Age"
+        style={{ height: 55 }}
+        name="age"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Date Input */}
+    <div className="col-12 col-sm-6">
+      <input
+        type="date"
+        className="form-control border-0"
+        style={{ height: 55 }}
+        name="date"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Problem Description */}
+    <div className="col-12">
+      <textarea
+        className="form-control border-0"
+        rows={5}
+        placeholder="Describe your problem"
+        name="problem"
+        onChange={e => changeUserFieldHandler(e)}
+        required
+      />
+    </div>
+
+    {/* Submit Button */}
+    <div className="col-12">
+      <button
+        className="btn btn-primary w-100 py-3"
+        type="submit"
+        onClick={e => onSubmitChange(e)}
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</form>
 
 
             
