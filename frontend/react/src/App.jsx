@@ -17,6 +17,7 @@ import Dashboard from './admin/components/Dashboard'
 
 import Admin from './admin/pages/Admin'
 import Messege from './admin/pages/Messege'
+import Appoint from './admin/pages/Appoint'
 
 
 function App() {
@@ -39,6 +40,7 @@ return (
 
        <Route path="/Admin" element={<Admin />} />
        <Route path="/Messege" element={<Messege />} />
+       <Route path="/Appoint" element={<Appoint />} />
 
 
     </Routes>

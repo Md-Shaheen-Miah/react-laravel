@@ -46,9 +46,9 @@ const Sidebar = () => {
         </button>
         {isAppointmentsOpen && (
           <ul className="dropdown">
-            <li><NavLink  style={{ textDecoration:'none'}} to="#">Today's Appointments</NavLink></li>
-            <li><NavLink style={{ textDecoration:'none'}} to="#">New Appointment</NavLink></li>
-            <li><NavLink style={{ textDecoration:'none'}} to="/Messege">Contact with us</NavLink></li>
+            <li><NavLink  style={{ textDecoration:'none'}} to="/Appoint"> All Appointments</NavLink></li>
+           
+            <li><NavLink style={{ textDecoration:'none'}} to="/Messege">Client Message</NavLink></li>
            
           </ul>
         )}
