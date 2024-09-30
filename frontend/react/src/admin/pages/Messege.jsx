@@ -4,6 +4,7 @@ import Sidebar from '../../admin/components/Sidebar'
 import '../../admin/css/Messege.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
 
@@ -20,16 +21,42 @@ const Contact = () => {
       });
   }, []);
 
-  // Delete data using DELETE API
   const handleDelete = (id) => {
-    axios.delete(`http://127.0.0.1:8000/api/contact/delete/${id}`)
-      .then(() => {
-        // Filter out the deleted item from the state
-        setData(data.filter(item => item.id !== id));
-      })
-      .catch((error) => {
-        console.error("There was an error deleting the data!", error);
-      });
+    // Show a confirmation dialog before deleting
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // If the user confirms, proceed with the deletion
+        axios.delete(`http://127.0.0.1:8000/api/contact/delete/${id}`)
+          .then(() => {
+            // Filter out the deleted item from the state
+            setData(data.filter(item => item.id !== id));
+            
+            // Show success message
+            Swal.fire(
+              'Deleted!',
+              'Your data has been deleted.',
+              'success'
+            );
+          })
+          .catch((error) => {
+            // Show error message
+            Swal.fire(
+              'Error!',
+              'There was an error deleting the data.',
+              'error'
+            );
+            console.error("There was an error deleting the data!", error);
+          });
+      }
+    });
   };
 
   return (
